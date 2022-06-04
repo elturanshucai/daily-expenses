@@ -1,0 +1,100 @@
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+.form{
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+    padding: 30px 20px;
+    background-color: rgb(128, 128, 255);
+    border-radius: 3px;
+}
+.form input{
+    height: 30px;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    width: 90%;
+}
+.form button{
+    padding: 3px 8px;
+    padding-top: 6px;
+    font-size: 30px;
+    border: none;
+    background-color: rgb(19, 19, 129);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.form button:hover{
+    background-color: rgb(241, 29, 29);
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+main .date{
+    height: 25px;
+    outline: none;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(25, 116, 207);
+    padding: 10px;
+    border-radius: 5px;
+}
+main .add{
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(25, 116, 207);
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.form button:disabled{
+    background-color: rgb(204, 204, 204);
+}
+main .add:hover{
+    background-color: rgb(124, 124, 248);
+    color: white;
+    transition: all 400ms;
+}
+main .add:disabled{
+    cursor: no-drop;
+    color: gray;
+}
+.form .name, .quantity, .price{
+    padding: 0;
+    margin-top: 3px;
+}
+.quantity input, .price input{
+    width: 90%;
+}
+
+@media screen and (max-width:720px) {
+    .form{
+        width: 90%;
+        padding: 15px 10px;
+        margin-bottom: 40px;
+    }
+    main .date{
+        width: 80%;
+        font-size: 18px;
+        height: 20px;
+        margin-bottom: 60px;
+    }
+    .form input{
+        height: 25px;
+        font-size: 16px;
+        padding-left: 2px;
+    }
+    .form .plus{
+        width: 20px;
+        height: 25px;
+    }
+    
+}

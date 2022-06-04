@@ -1,0 +1,60 @@
+.list{
+    position: absolute;
+    right: 10px;
+    top: 90px;
+    width: 400px;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.listItem{
+    width: 100%;
+}
+.listItem div{
+    font-size: 18px;
+}
+.listdate{
+    border: none;
+    background-color: rgb(5, 5, 104);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.listdate span{
+    padding: 10px;
+    cursor: pointer;
+}
+.listdate button{
+    background-color: rgb(5, 5, 104);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+}
+.listdate button:hover{
+    background-color: rgb(255, 2, 2);
+}
+.innerList div{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.innerList div:first-child{
+    background-color: rgb(228, 228, 23);
+}
+.innerList div:last-child{
+    border-bottom: 1px solid black;
+}
+.listclass{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+    .list{
+        width: 90%;
+    }
+}

@@ -1,0 +1,14 @@
+
+.header{
+    width: 100%;
+    background-color: rgb(0, 27, 180);
+    padding: 40px 20px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.header .listclass{
+    margin-top: 6px;
+}
