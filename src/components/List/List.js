@@ -16,11 +16,13 @@ function List (){
                     ))}
                 </>
                 :
-                <>
+                {
+                    localList ? <>
                     {localList.map((list,index)=>(
                         <ListItem key={index} item={list} index={index} />
                     ))}
-                </>
+                    </>:null
+                }
             }
 
             
