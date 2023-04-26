@@ -13,7 +13,7 @@ function List (){
         if(list!==null){
             setLocalList(list)
         }
-    }, [])
+    }, [stateList])
     return(
         <div className="list">
             {

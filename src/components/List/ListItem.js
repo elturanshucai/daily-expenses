@@ -5,6 +5,9 @@ import './List.css'
 
 function ListItem({item, index}){
     const dispatch=useDispatch()
+    const handleClick=()=>{
+        dispatch(deleteDay(index))
+    }
     let toplam=item.reduce((acc, element)=>{
         return acc+(element.amount*element.price)
     }, 0)
@@ -14,7 +17,9 @@ function ListItem({item, index}){
     const [display, setDisplay]=useState(false)
     return(
         <div className="listItem">
-            <div className="listdate"><span onClick={()=>setDisplay(!display)}>{item[0].date}</span><span onClick={()=>setDisplay(!display)}>Toplam : {toplam} AZN</span><button onClick={()=>dispatch(deleteDay(index))}>X</button></div>
+            <div className="listdate"><span onClick={()=>setDisplay(!display)}>{item[0].date}</span><span onClick={()=>setDisplay(!display)}>Toplam : {toplam} AZN</span>
+            <button onClick={handleClick}>X</button>
+            </div>
             {item.map(item1=>(
                 <div className="innerList">
                     {
