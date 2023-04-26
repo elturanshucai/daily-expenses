@@ -46,7 +46,7 @@ function Main(){
 
     return(
         <main>
-            <input placeholder='Tarix' defaultValue={date} className='date' name='date' onChange={dateChange} disabled={disableInput} required/>
+            <input placeholder='Tarix' type='date' defaultValue={date} className='date' name='date' onChange={dateChange} disabled={disableInput} required/>
             <div className='form'>
                 <div className='name'>
                     <input placeholder='Nə aldım ?' name='name' onChange={nameChange} required />

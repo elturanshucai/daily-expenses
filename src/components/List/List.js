@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 function List (){
     const stateList=useSelector(state=>state.datereducer.list)
-    const localList=JSON.parse(localStorage.getItem("list"))
+    const localList=JSON.parse(localStorage?.getItem("list"))
     return(
         <div className="list">
             {
