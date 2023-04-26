@@ -1,11 +1,19 @@
 import React from "react";
+import {useState, useEffect} from "react"
 import ListItem from "./ListItem";
 import './List.css';
 import { useSelector } from "react-redux";
 
 function List (){
     const stateList=useSelector(state=>state.datereducer.list)
-    const localList=JSON.parse(localStorage?.getItem("list"))
+    const [localList, setLocalList] = useState([])
+    
+    useEffect(()=>{
+        let list = JSON.parse(localStorage?.getItem("list"))
+        if(list!==null){
+            setLocalList(list)
+        }
+    }, [])
     return(
         <div className="list">
             {
@@ -17,7 +25,7 @@ function List (){
                 </>
                 :
                 <>
-                    {localList.map((list,index)=>(
+                    {localList.length>0 && localList.map((list,index)=>(
                         <ListItem key={index} item={list} index={index} />
                     ))}
                 </>
